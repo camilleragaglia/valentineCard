@@ -1,0 +1,56 @@
+.front, .back {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  height: 100%;
+  width: 100%; }
+
+.back {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+body {
+  height: 100vh;
+  width: 100vw;
+  perspective: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(200deg, #ddf1c0 4%, #97D9E1 98%, #ffffff 100%); }
+
+.card {
+  height: 300px;
+  width: 600px;
+  position: relative;
+  transform-style: preserve-3d;
+  border-radius: 5px;
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.25);
+  transition: 1.25s; }
+  .card:active {
+    transform: rotateX(-180deg); }
+
+.front {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-family: 'Rancho', cursive;
+  font-size: 3em;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+  background: url("imgs/heart.jpg");
+  background-size: cover;
+  color: #FFFFFF;
+  z-index: 2;
+  backface-visibility: hidden; }
+  .front span {
+    padding: 0 0 55px 0; }
+
+.back {
+  font-family: 'Rancho', cursive;
+  font-size: 3em;
+  text-shadow: 3px 3px 5px transparent;
+  background: url("imgs/oldpaper.jpg");
+  color: #000000;
+  z-index: 1;
+  transform: rotateX(-180deg);
+  backface-visibility: hidden; }
